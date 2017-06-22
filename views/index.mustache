@@ -1,0 +1,23 @@
+<link href="./style.css" rel="stylesheet" type="text/css">
+
+<form action="/" method="post"><input name="newTodo" type="text" placeholder="Add a todo item"></form>
+<h2>Items To Do</h2>
+<section class="todoListContainer">
+{{#todos}}
+    <div class="todoItem">
+            <div class="button">Mark Item Complete</div>
+            <p>{{.}}</p>
+    </div>
+{{/todos}}
+
+</section>
+<h2>Items Done Did</h2>
+<section class="completedtodoListContainer">
+    {{#completedTodos}}
+        <div>
+            <p>{{.}}</p>
+        </div>
+    {{/completedTodos}}
+</section>
+
+<script src="./js/main.js"></script>
